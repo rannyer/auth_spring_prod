@@ -21,6 +21,7 @@ public class ProductController {
     @GetMapping
     public ResponseEntity<List<ProductResponseDTO>> getProducts(){
     return ResponseEntity.ok(productRepository.findAll().stream().map(ProductResponseDTO::new).toList());
+
     }
 
     @PostMapping
